@@ -18,6 +18,8 @@ In your emacs config:
     (add-to-list 'auto-mode-alist '("\\.adl\\'" . adl-mode))
 
 
-Bugs
+Known Bugs
 ====
+
+Indentations invoked by carriage return are broken.
 
