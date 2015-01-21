@@ -305,14 +305,17 @@ rigidly along with this one."
 ;;   (use-local-map adl-mode-map)
 ;; )
 
-(provide 'adl-mode)
+
 
 ;;
 ;; On Load
 ;;
 
-;; Run coffee-mode for files ending in .coffee.
 ;; Run adl-mode for files ending in .adl.
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.adl$" . adl-mode))
 (add-to-list 'auto-mode-alist '("\\.adls$" . adl-mode))
+
+(provide 'adl-mode)
+
+;;; adl-mode.el ends here
