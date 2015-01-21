@@ -312,5 +312,7 @@ rigidly along with this one."
 ;;
 
 ;; Run coffee-mode for files ending in .coffee.
+;; Run adl-mode for files ending in .adl.
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.adl$" . adl-mode))
+(add-to-list 'auto-mode-alist '("\\.adls$" . adl-mode))
