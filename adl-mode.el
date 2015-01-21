@@ -1,21 +1,24 @@
-; This is an emacs major mode for ADL that does keyword coloring
-; and indentation.
-; Copyright (C) 2013 Akimichi Tatsukawa
+;;; adl-mode --- A minor mode for editing openEHR ADL files.
+;;; Commentary:
+;; This is an emacs major mode for ADL that does keyword coloring
+;; and indentation.
+;; Copyright (C) 2013 Akimichi Tatsukawa
 
-; This program is free software; you can redistribute it and/or
-; modify it under the terms of the GNU General Public License
-; as published by the Free Software Foundation; either version 2
-; of the License, or (at your option) any later version.
+;; This program is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License
+;; as published by the Free Software Foundation; either version 2
+;; of the License, or (at your option) any later version.
 
-; This program is distributed in the hope that it will be useful,
-; but WITHOUT ANY WARRANTY; without even the implied warranty of
-; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-; GNU General Public License for more details.
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
 
-; You should have received a copy of the GNU General Public License
-; along with this program; if not, write to the Free Software
-; Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-
+;; You should have received a copy of the GNU General Public License
+;; along with this program; if not, write to the Free Software
+;; Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+;;
+;;; Code:
 
 (defvar adl-mode-syntax-table nil
   "Syntax table used in `adl-mode' buffers.")
@@ -302,12 +305,17 @@ rigidly along with this one."
 ;;   (use-local-map adl-mode-map)
 ;; )
 
-(provide 'adl-mode)
+
 
 ;;
 ;; On Load
 ;;
 
-;; Run coffee-mode for files ending in .coffee.
+;; Run adl-mode for files ending in .adl.
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.adl$" . adl-mode))
+(add-to-list 'auto-mode-alist '("\\.adls$" . adl-mode))
+
+(provide 'adl-mode)
+
+;;; adl-mode.el ends here
